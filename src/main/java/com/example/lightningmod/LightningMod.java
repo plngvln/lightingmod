@@ -23,7 +23,7 @@ public class LightningMod implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Initializing Lightning Mod...");
-        ModConfig.init();
+        ModConfig.register();
         ServerTickEvents.END_SERVER_TICK.register(this::onServerTick);
         LOGGER.info("Lightning Mod initialized.");
     }

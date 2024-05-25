@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "lightingmod",
+  "id": "lightningmod",
   "version": "1.1",
-  "name": "lightingmod",
+  "name": "lightningmod",
   "description": "A mod that increases the number of lightning strikes during thunderstorms.",
   "authors": [
-    "Your Name"
+    "trefls"
   ],
 
   "license": "MIT",
@@ -20,12 +20,12 @@
     ],
     "modmenu": [
       "com.example.lightningmod.LightningModMenuIntegration"
-      ]
+    ]
   },
   "depends": {
     "fabricloader": ">=0.15.11",
     "fabric": "*",
-    "minecraft": "1.20.1",
+    "minecraft": ">=1.20.1 <=1.20.6",
     "cloth-config2": ">=6.2.64"
   }
 }

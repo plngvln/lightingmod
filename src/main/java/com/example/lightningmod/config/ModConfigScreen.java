@@ -36,7 +36,7 @@ public class ModConfigScreen {
                 .build());
 
         general.addEntry(entryBuilder.startIntSlider(Text.translatable("option.lightningmod.lightningRadius"), config.lightningRadius, 1, 256)
-                .setDefaultValue(10)
+                .setDefaultValue(256)
                 .setTooltip(Text.translatable("tooltip.lightningmod.lightningRadius"))
                 .setSaveConsumer(newValue -> config.lightningRadius = newValue)
                 .build());

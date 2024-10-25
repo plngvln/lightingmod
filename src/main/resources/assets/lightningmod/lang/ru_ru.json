@@ -1,0 +1,12 @@
+{
+  "title.lightningmod.config": "Настройки Lightning Mod",
+  "category.lightningmod.general": "Основные настройки",
+  "option.lightningmod.enabled": "Включить мод",
+  "tooltip.lightningmod.enabled": "Включить или выключить мод",
+  "option.lightningmod.lightningChance": "Шанс молнии",
+  "tooltip.lightningmod.lightningChance": "Шанс удара молнии за тик на игрока",
+  "option.lightningmod.lightningRadius": "Радиус молнии",
+  "tooltip.lightningmod.lightningRadius": "Радиус вокруг игрока для ударов молнии",
+  "option.lightningmod.lightningRodEnabled": "Включить громоотвод",
+  "tooltip.lightningmod.lightningRodEnabled": "Включить или выключить функцию громоотвода"
+}

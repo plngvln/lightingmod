@@ -10,7 +10,7 @@ import net.minecraft.client.gui.screen.Screen;
 public class ModConfig implements ConfigData {
     public boolean modEnabled = true;
     public float lightningChance = 0.1f; // Chance of lightning strike per tick per player
-    public int lightningRadius = 256; // Radius around the player for lightning strikes
+    public int lightningRadius = 256; // Radius around the player for lightning strikesgradlew-update
     public boolean lightningRodEnabled = true; // Enable or disable lightning rod feature
 
     public static void register() {

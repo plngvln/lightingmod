@@ -1,0 +1,12 @@
+{
+  "title.lightningmod.config": "Lightning Mod Configuration",
+  "category.lightningmod.general": "General Settings",
+  "option.lightningmod.enabled": "Enable Mod",
+  "tooltip.lightningmod.enabled": "Toggle the mod on or off",
+  "option.lightningmod.lightningChance": "Lightning Chance",
+  "tooltip.lightningmod.lightningChance": "Chance of lightning strike per tick per player",
+  "option.lightningmod.lightningRadius": "Lightning Radius",
+  "tooltip.lightningmod.lightningRadius": "Radius around the player for lightning strikes",
+  "option.lightningmod.lightningRodEnabled": "Enable Lightning Rod",
+  "tooltip.lightningmod.lightningRodEnabled": "Toggle the lightning rod feature on or off"
+}

@@ -13,38 +13,19 @@ public class ModConfigScreen {
                 .setParentScreen(parent)
                 .setTitle(Text.translatable("title.lightningmod.config"));
 
-        builder.setSavingRunnable(() -> {
-            // Serialize the config into the config file
-            AutoConfig.getConfigHolder(ModConfig.class).save();
-        });
+        builder.setSavingRunnable(() -> AutoConfig.getConfigHolder(ModConfig.class).save());
 
-        ConfigCategory general = builder.getOrCreateCategory(Text.translatable("category.lightningmod.general"));
+        ConfigCategory main = builder.getOrCreateCategory(Text.translatable("category.lightningmod.main"));
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
         ModConfig config = ModConfig.get();
 
-        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option.lightningmod.enabled"), config.modEnabled)
-                .setDefaultValue(true)
-                .setTooltip(Text.translatable("tooltip.lightningmod.enabled"))
-                .setSaveConsumer(newValue -> config.modEnabled = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startFloatField(Text.translatable("option.lightningmod.lightningChance"), config.lightningChance)
-                .setDefaultValue(0.1f)
-                .setTooltip(Text.translatable("tooltip.lightningmod.lightningChance"))
+        main.addEntry(entryBuilder.startIntField(Text.translatable("option.lightningmod.frequency"), (int) config.lightningChance)
+                .setDefaultValue(100000)
+                .setTooltip(Text.translatable("tooltip.lightningmod.frequency"))
+                .setMin(100) // Минимальное значение
+                .setMax(1000000) // Максимальное значение
                 .setSaveConsumer(newValue -> config.lightningChance = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startIntSlider(Text.translatable("option.lightningmod.lightningRadius"), config.lightningRadius, 1, 256)
-                .setDefaultValue(256)
-                .setTooltip(Text.translatable("tooltip.lightningmod.lightningRadius"))
-                .setSaveConsumer(newValue -> config.lightningRadius = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option.lightningmod.lightningRodEnabled"), config.lightningRodEnabled)
-                .setDefaultValue(true)
-                .setTooltip(Text.translatable("tooltip.lightningmod.lightningRodEnabled"))
-                .setSaveConsumer(newValue -> config.lightningRodEnabled = newValue)
                 .build());
 
         return builder.build();

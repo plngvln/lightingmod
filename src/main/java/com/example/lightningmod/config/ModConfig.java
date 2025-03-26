@@ -8,10 +8,7 @@ import net.minecraft.client.gui.screen.Screen;
 
 @Config(name = "lightningmod")
 public class ModConfig implements ConfigData {
-    public boolean modEnabled = true;
-    public float lightningChance = 0.1f; // Chance of lightning strike per tick per player
-    public int lightningRadius = 256; // Radius around the player for lightning strikesgradlew-update
-    public boolean lightningRodEnabled = true; // Enable or disable lightning rod feature
+    public float lightningChance = 1000;
 
     public static void register() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);

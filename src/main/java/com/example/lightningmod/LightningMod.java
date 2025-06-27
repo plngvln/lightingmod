@@ -111,7 +111,6 @@ public class LightningMod implements ModInitializer {
     private void spawnLightning(ServerWorld world, BlockPos pos, boolean struckLightningRod) {
         BlockPos topPos = world.getTopPosition(Heightmap.Type.MOTION_BLOCKING, pos);
 
-        // Use the appropriate SpawnReason for the lightning
         LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(world, null, topPos, SpawnReason.TRIGGERED, false, false);
         if (lightning != null) {
             lightning.refreshPositionAfterTeleport(topPos.getX(), topPos.getY(), topPos.getZ());

@@ -1,6 +1,6 @@
-package com.example.lightningmod.mixins;
+package net.p4pingvin4ik.lightningmod.mixins;
 
-import com.example.lightningmod.config.ModConfig;
+import net.p4pingvin4ik.lightningmod.config.ModConfig;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;

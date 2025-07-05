@@ -13,10 +13,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.example.lightningmod.lightingclient"
+      "net.p4pingvin4ik.lightningmod.lightingclient"
     ],
     "modmenu": [
-      "com.example.lightningmod.LightningModMenuIntegration"
+      "net.p4pingvin4ik.lightningmod.LightningModMenuIntegration"
     ]
   },
   "mixins": [

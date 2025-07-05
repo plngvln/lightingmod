@@ -1,4 +1,4 @@
-package com.example.lightningmod.config;
+package net.p4pingvin4ik.lightningmod.config;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;

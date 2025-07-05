@@ -4,8 +4,8 @@
   "package": "com.example.lightningmod.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "WorldMixin",
-    "ServerWorldMixin"
+    "net.example.lightningmod.mixins.WorldMixin",
+    "net.example.lightningmod.mixins.ServerWorldMixin"
   ],
   "injectors": {
     "defaultRequire": 1

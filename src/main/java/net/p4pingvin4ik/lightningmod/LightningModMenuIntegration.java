@@ -1,6 +1,6 @@
-package com.example.lightningmod;
+package net.p4pingvin4ik.lightningmod;
 
-import com.example.lightningmod.config.ModConfig;
+import net.p4pingvin4ik.lightningmod.config.ModConfig;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 

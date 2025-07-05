@@ -1,6 +1,6 @@
-package com.example.lightningmod.mixins;
+package net.p4pingvin4ik.lightningmod.mixins;
 
-import com.example.lightningmod.config.ModConfig;
+import net.p4pingvin4ik.lightningmod.config.ModConfig;
 import net.minecraft.server.world.ServerWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;

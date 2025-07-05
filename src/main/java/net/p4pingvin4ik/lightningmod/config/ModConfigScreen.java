@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 
 public class ModConfigScreen {
 
-    // Этот метод теперь можно вызывать через AutoConfig, но оставим его для наглядности
+    // Этот метод теперь можно вызывать через AutoConfig
     public static Screen create(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
@@ -36,7 +36,7 @@ public class ModConfigScreen {
                 .setDefaultValue(100000) // Значение по умолчанию
                 .setTooltip(Text.translatable("tooltip.lightningmod.frequency")) // Подсказка
                 .setSaveConsumer(newValue -> config.lightningChance = newValue) // Что делать при сохранении
-                .build()); // Собираем опцию
+                .build());
 
 
         main.addEntry(entryBuilder.startLongSlider(

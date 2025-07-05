@@ -19,7 +19,7 @@ public class ModConfig implements ConfigData {
         return AutoConfig.getConfigHolder(ModConfig.class).getConfig();
     }
     public double skeletonHorseChanceMultiplier = 1.0;
-    public boolean lightningInAllBiomes = false; // По умолчанию выключено
+    public boolean lightningInAllBiomes = false;
     public static Screen getConfigScreen(Screen parent) {
         return ModConfigScreen.create(parent);
     }

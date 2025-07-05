@@ -5,7 +5,7 @@
   "name": "lightningmod",
   "description": "A mod that increases the number of lightning strikes during thunderstorms.",
   "authors": [
-    "trefls"
+    "p4pingvin4ik"
   ],
 
   "license": "MIT",
@@ -28,7 +28,7 @@
   "depends": {
     "fabricloader": ">=0.16.14",
     "fabric": "*",
-    "minecraft": ">=1.21.2 <=1.21.6",
+    "minecraft": "~1.21",
     "cloth-config2": ">=6.2.64"
   }
 }

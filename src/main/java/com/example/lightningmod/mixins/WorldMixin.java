@@ -1,30 +1,25 @@
 package com.example.lightningmod.mixins;
 
 import com.example.lightningmod.config.ModConfig;
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.Constant;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(ServerWorld.class)
-public class WorldMixin {
-    @ModifyConstant(
-            // ИЗМЕНЕНИЕ: Указываем правильный метод и его дескриптор
-            method = "tickThunder(Lnet/minecraft/world/chunk/WorldChunk;)V",
-            constant = @Constant(intValue = 100000)
-    )
-    private int modifyLightningChance(int original) {
-        // Ваша логика остается абсолютно правильной
-        return ModConfig.get().lightningChance;
-    }
-    @ModifyConstant(
-            method = "tickThunder(Lnet/minecraft/world/chunk/WorldChunk;)V",
-            // Мы целимся в константу типа double со значением 0.01
-            constant = @Constant(doubleValue = 0.01)
-    )
-    private double modifySkeletonHorseChance(double original) {
-        // 'original' здесь равен 0.01
-        // Мы умножаем его на наш множитель из конфига
-        return original * ModConfig.get().skeletonHorseChanceMultiplier;
+@Mixin(World.class)
+public abstract class WorldMixin {
+
+    // Используем @Inject, чтобы вмешаться в начало метода
+    @Inject(method = "hasRain", at = @At("HEAD"), cancellable = true)
+    private void onHasRain(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+        // Проверяем, включена ли наша опция в конфиге
+        if (ModConfig.get().lightningInAllBiomes) {
+            // Если да, то принудительно устанавливаем возвращаемое значение на 'true'
+            // и отменяем выполнение остальной части оригинального метода.
+            cir.setReturnValue(true);
+        }
+        // Если опция выключена, этот код ничего не делает, и метод hasRain работает как обычно.
     }
 }

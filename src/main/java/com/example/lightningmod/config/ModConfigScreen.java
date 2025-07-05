@@ -51,6 +51,15 @@ public class ModConfigScreen {
                 .setSaveConsumer(newValue -> config.skeletonHorseChanceMultiplier = newValue / 100.0)
                 .setTextGetter(value -> Text.of(value + " %"))
                 .build());
+        main.addEntry(entryBuilder.startBooleanToggle(
+                        Text.translatable("option.lightningmod.all_biomes"), // Название опции
+                        config.lightningInAllBiomes // Текущее значение
+                )
+                .setDefaultValue(false) // Значение по умолчанию
+                .setTooltip(Text.translatable("tooltip.lightningmod.all_biomes")) // Подсказка
+                .setSaveConsumer(newValue -> config.lightningInAllBiomes = newValue) // Сохранение
+                .build());
+
         return builder.build();
     }
 }

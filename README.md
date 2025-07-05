@@ -6,49 +6,55 @@ LightningMod is a Minecraft mod for Fabric that adds dynamic and realistic light
 
 ## Features
 
-- **Random Lightning Strikes**: Lightning can randomly strike near players during thunderstorms in the overworld.
-- **Lightning Rod Attraction**: When lightning rods are enabled, the mod will check for nearby lightning rods within a specified radius and strike them if found.
-- **Configurable Settings**: The chance for lightning strikes, radius, and other settings can be adjusted in the configuration.
+- **Configurable Lightning Frequency**: Adjust the chance of lightning strikes during a thunderstorm. Make them incredibly frequent or extremely rare using a simple slider. The lower the value, the more often lightning will strike.
+- **Skeleton Horse Control**: Modify the spawn chance of the "Skeleton Trap" horses that appear from lightning strikes. You can reduce the chance or disable them completely.
+- **All-Biome Lightning**: Enable an option to allow lightning to strike in any biome during a thunderstorm, including deserts, savannas, and mesas. No more safe havens from the storm!
+- **In-Game Configuration**: All settings can be easily changed in-game through the ModMenu settings screen, powered by Cloth Config.
 
 ## Requirements
 
-To use this mod, you need to install the following dependencies:
+To use this mod, you need to have the following mods installed:
 
-- [Fabric API](https://modrinth.com/mod/fabric-api) (required)
-- [Cloth Config](https://modrinth.com/mod/cloth-config) (required for configuration management)
-
+- [Fabric API](https://modrinth.com/mod/fabric-api) (Required)
+- [Mod Menu](https://modrinth.com/mod/modmenu) (Required to access the config screen in-game)
+- [Cloth Config API](https://modrinth.com/mod/cloth-config) (Required for the configuration screen)
 
 ## Installation
 
-1. Download the latest `.jar` file for the mod.
-2. Download the [Fabric API](https://modrinth.com/mod/fabric-api) and [Cloth Config](https://modrinth.com/mod/cloth-config) mods.
-3. Place all three `.jar` files (LightningMod, Fabric API, and Cloth Config) in your Fabric server's `mods` folder.
-4. Start or restart the Fabric server to load the mods.
-5. A configuration file will be generated in the `config` folder where settings can be customized.
+1.  Download the latest `.jar` file for LightningMod.
+2.  Download the required dependencies: Fabric API, Mod Menu, and Cloth Config.
+3.  Place all the downloaded `.jar` files into your `mods` folder.
+4.  Launch the game. The mod is now installed.
 
 ## Configuration
 
-The configuration file (`lightningmod.json`) includes the following settings:
+You can configure the mod in-game by clicking the "Mods" button on the main menu, selecting "LightningMod", and clicking the config button.
 
-- `modEnabled` (boolean): Enables or disables the mod (`true` or `false`).
-- `lightningChance` (double): The chance for lightning to strike each tick during a thunderstorm (range 0.0 - 1.0).
-- `lightningRadius` (integer): The radius around players where lightning can randomly strike.
-- `lightningRodEnabled` (boolean): Enables lightning rod attraction behavior.
+The configuration settings are saved in `config/lightningmod.json` and include the following options:
+
+-   `lightningChance` (integer):
+    -   Controls the frequency of lightning strikes. A lower number means more frequent lightning.
+    -   **Default**: `100000` (Vanilla value)
+    -   **Range**: `100` to `1,000,000`
+
+-   `skeletonHorseChanceMultiplier` (double):
+    -   A multiplier for the spawn chance of Skeleton Horse traps from lightning.
+    -   **Default**: `1.0` (100% of vanilla chance)
+    -   **Range**: `0.0` (0% chance) to `1.0` (100% chance)
+
+-   `lightningInAllBiomes` (boolean):
+    -   If `true`, lightning can strike in all biomes during a thunderstorm, ignoring biome-specific rainfall rules.
+    -   **Default**: `false`
 
 ## Troubleshooting
 
-- **Mod Not Working**: Make sure `modEnabled` is set to `true` in the configuration file, and that thunderstorms are occurring in the overworld.
-- **Performance Issues**: Reduce the `lightningRadius` or lightning chance to decrease the number of checks per tick.
+-   **Mod Not Working / No Changes**: Ensure you have installed all the required dependencies (Fabric API, Mod Menu, Cloth Config). Also, make sure you have saved your changes in the config screen.
+-   **Can't Find Config Screen**: You must have [Mod Menu](https://modrinth.com/mod/modmenu) installed to access the configuration screen from the main menu.
 
 ## License
 
-This mod is licensed under the MIT License. See the `LICENSE` file for details.
+This mod is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Contributing
 
-Feel free to contribute by opening issues, submitting pull requests, or providing feedback. All contributions are welcome!
-
-## Contact
-
-For any questions or issues, you can reach out via GitHub Issues.
-
+Contributions are welcome! If you have ideas for new features, find a bug, or want to improve the code, feel free to open an issue or submit a pull request on GitHub.

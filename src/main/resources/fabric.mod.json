@@ -12,9 +12,6 @@
   "icon": "assets/lightningmod/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.example.lightningmod.LightningMod"
-    ],
     "client": [
       "com.example.lightningmod.lightingclient"
     ],
@@ -22,8 +19,14 @@
       "com.example.lightningmod.LightningModMenuIntegration"
     ]
   },
+  "mixins": [
+    {
+      "config": "lightningmod.mixins.json",
+      "environment": "*"
+    }
+  ],
   "depends": {
-    "fabricloader": ">=0.16.7",
+    "fabricloader": ">=0.16.14",
     "fabric": "*",
     "minecraft": ">=1.21.6 <=1.21.7",
     "cloth-config2": ">=6.2.64"

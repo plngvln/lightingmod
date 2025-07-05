@@ -1,12 +1,13 @@
 {
-  "title.lightningmod.config": "Настройки Lightning Mod",
-  "category.lightningmod.general": "Основные настройки",
-  "option.lightningmod.enabled": "Включить мод",
-  "tooltip.lightningmod.enabled": "Включить или выключить мод",
-  "option.lightningmod.lightningChance": "Шанс молнии",
-  "tooltip.lightningmod.lightningChance": "Шанс удара молнии за тик на игрока",
-  "option.lightningmod.lightningRadius": "Радиус молнии",
-  "tooltip.lightningmod.lightningRadius": "Радиус вокруг игрока для ударов молнии",
-  "option.lightningmod.lightningRodEnabled": "Включить громоотвод",
-  "tooltip.lightningmod.lightningRodEnabled": "Включить или выключить функцию громоотвода"
+  "title.lightningmod.config": "Настройки мода на молнии",
+  "category.lightningmod.main": "Основное",
+
+  "option.lightningmod.frequency": "Частота ударов молнии",
+  "tooltip.lightningmod.frequency": "Шанс удара молнии во время грозы.\nЧем МЕНЬШЕ значение, тем ЧАЩЕ бьют молнии. Ваниль: 100 000.",
+
+  "option.lightningmod.skeleton_horse_chance": "Шанс скелетной ловушки",
+  "tooltip.lightningmod.skeleton_horse_chance": "Множитель шанса появления всадников-скелетов при ударе молнии.\n1.0 = Ванильный шанс (100%), 0.5 = Половина шанса (50%), 0.0 = Отключено.",
+
+  "option.lightningmod.all_biomes": "Молнии во всех биомах",
+  "tooltip.lightningmod.all_biomes": "Если включено, молнии смогут бить в засушливых биомах\n(пустыни, саванны и т.д.) во время грозы."
 }

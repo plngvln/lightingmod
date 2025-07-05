@@ -8,10 +8,8 @@ import net.minecraft.client.gui.screen.Screen;
 
 @Config(name = "lightningmod")
 public class ModConfig implements ConfigData {
-    public boolean modEnabled = true;
-    public float lightningChance = 0.1f; // Chance of lightning strike per tick per player
-    public int lightningRadius = 256; // Radius around the player for lightning strikesgradlew-update
-    public boolean lightningRodEnabled = true; // Enable or disable lightning rod feature
+
+    public int lightningChance = 10000;
 
     public static void register() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
@@ -20,8 +18,9 @@ public class ModConfig implements ConfigData {
     public static ModConfig get() {
         return AutoConfig.getConfigHolder(ModConfig.class).getConfig();
     }
-
+    public double skeletonHorseChanceMultiplier = 1.0;
+    public boolean lightningInAllBiomes = false; // По умолчанию выключено
     public static Screen getConfigScreen(Screen parent) {
-        return ModConfigScreen.createConfigScreen(parent);
+        return ModConfigScreen.create(parent);
     }
 }

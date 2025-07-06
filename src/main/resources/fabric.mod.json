@@ -5,27 +5,30 @@
   "name": "lightningmod",
   "description": "A mod that increases the number of lightning strikes during thunderstorms.",
   "authors": [
-    "trefls"
+    "p4pingvin4ik"
   ],
 
   "license": "MIT",
   "icon": "assets/lightningmod/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.example.lightningmod.LightningMod"
-    ],
     "client": [
-      "com.example.lightningmod.lightingclient"
+      "net.p4pingvin4ik.lightningmod.lightingclient"
     ],
     "modmenu": [
-      "com.example.lightningmod.LightningModMenuIntegration"
+      "net.p4pingvin4ik.lightningmod.LightningModMenuIntegration"
     ]
   },
+  "mixins": [
+    {
+      "config": "lightningmod.mixins.json",
+      "environment": "*"
+    }
+  ],
   "depends": {
-    "fabricloader": ">=0.16.7",
+    "fabricloader": ">=0.16.14",
     "fabric": "*",
-    "minecraft": ">=1.21.4 <=1.21.4",
+    "minecraft": ">=1.21.6 <=1.21.7",
     "cloth-config2": ">=6.2.64"
   }
 }

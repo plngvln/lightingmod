@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -17,16 +17,16 @@ repositories {
 
 dependencies {
     // To change the versions see the gradle.properties file
-    minecraft "com.mojang:minecraft:1.21.4"
-    mappings "net.fabricmc:yarn:1.21.4+build.1:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.16.9"
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modApi "com.terraformersmc:modmenu:15.0.0-beta.3"
+    modApi "me.shedaniel.cloth:cloth-config-fabric:19.0.147"
+
     implementation 'org.slf4j:slf4j-api:1.7.32'
     runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.14.1'
-
-    // Fabric API. This is technically optional, but you probably want it anyway.
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.110.5+1.21.4"
-    modApi "com.terraformersmc:modmenu:12.0.0-beta.1"
-    modApi"me.shedaniel.cloth:cloth-config-fabric:17.0.142"
     }
 
 

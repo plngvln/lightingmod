@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.p4pingvin4ik.lightningmod.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "WorldMixin",
+    "ServerWorldMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

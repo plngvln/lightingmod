@@ -1,12 +1,13 @@
 {
-  "title.lightningmod.config": "Lightning Mod Configuration",
-  "category.lightningmod.general": "General Settings",
-  "option.lightningmod.enabled": "Enable Mod",
-  "tooltip.lightningmod.enabled": "Toggle the mod on or off",
-  "option.lightningmod.lightningChance": "Lightning Chance",
-  "tooltip.lightningmod.lightningChance": "Chance of lightning strike per tick per player",
-  "option.lightningmod.lightningRadius": "Lightning Radius",
-  "tooltip.lightningmod.lightningRadius": "Radius around the player for lightning strikes",
-  "option.lightningmod.lightningRodEnabled": "Enable Lightning Rod",
-  "tooltip.lightningmod.lightningRodEnabled": "Toggle the lightning rod feature on or off"
+  "title.lightningmod.config": "Lightning Mod Settings",
+  "category.lightningmod.main": "Main",
+
+  "option.lightningmod.frequency": "Lightning Frequency",
+  "tooltip.lightningmod.frequency": "The chance of a lightning strike during a thunderstorm.\nA LOWER number means MORE frequent lightning. Vanilla: 100,000.",
+
+  "option.lightningmod.skeleton_horse_chance": "Skeleton Trap Chance",
+  "tooltip.lightningmod.skeleton_horse_chance": "Multiplier for the chance of a lightning strike spawning a skeleton horse trap.\n1.0 = Vanilla (100%), 0.5 = Half chance (50%), 0.0 = Disabled.",
+
+  "option.lightningmod.all_biomes": "Lightning in All Biomes",
+  "tooltip.lightningmod.all_biomes": "If enabled, lightning can strike in dry biomes\n(deserts, savannas, etc.) during a thunderstorm."
 }
